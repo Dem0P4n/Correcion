@@ -1,1 +1,10 @@
-<p>formulario-seccion works!</p>
+<section>
+  <fieldset>
+    <label for="">Nombre de la Seccion</label>
+    <input type="text" [value]="" (input)="nombreSeccion($event)">
+    {{ nuevoHistorialSeccion.nombreSeccion }}
+  </fieldset>
+<fieldset>
+  <button type="button" role="button" (click)="enviar()">Crear</button>
+</fieldset>
+</section>
