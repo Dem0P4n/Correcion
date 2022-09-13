@@ -1,1 +1,13 @@
-<p>alumno works!</p>
+<article>
+  <p>{{ alumno.rut }}</p>
+  <h2 *ngIf="alumno.nombreAlumno; then aquiIf; else aquiElse"></h2>
+    <ng-template #aquiIf>
+      <p>{{ alumno.nombreAlumno }}</p>
+    </ng-template>
+    <ng-template #aquiElse>
+      <p>Sin nombre</p>
+    </ng-template>
+    <p>{{ alumno.apellidoAlumno }}</p>
+    <p>{{ alumno.edad }}</p>
+    <p>{{ alumno.seccion.nombreSeccion}}</p>
+</article>

@@ -1,7 +1,7 @@
 <section>
   <fieldset>
-    <label for="">Nombre de la Seccion</label>
-    <input type="text" [value]="" (input)="nombreSeccion($event)">
+    <label for="" [ngStyle]="{'color': 'red'}">Nombre de la Seccion</label><br>
+    <input type="text" [value]="nuevoHistorialSeccion.nombreSeccion" (input)="nombreSeccion($event)">
     {{ nuevoHistorialSeccion.nombreSeccion }}
   </fieldset>
 <fieldset>

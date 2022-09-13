@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Alumno } from './../../modelos/alumno'
 @Component({
   selector: 'app-lista-alumnos',
   templateUrl: './lista-alumnos.component.html',
   styleUrls: ['./lista-alumnos.component.scss']
 })
-export class ListaAlumnosComponent implements OnInit {
+export class ListaAlumnosComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() public alumnos!: Array<Alumno>
 
 }
