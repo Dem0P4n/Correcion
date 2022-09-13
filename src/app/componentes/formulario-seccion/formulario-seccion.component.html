@@ -2,7 +2,6 @@
   <fieldset>
     <label for="" [ngStyle]="{'color': 'red'}">Nombre de la Seccion</label><br>
     <input type="text" [value]="nuevoHistorialSeccion.nombreSeccion" (input)="nombreSeccion($event)">
-    {{ nuevoHistorialSeccion.nombreSeccion }}
   </fieldset>
 <fieldset>
   <button type="button" role="button" (click)="enviar()">Crear</button>

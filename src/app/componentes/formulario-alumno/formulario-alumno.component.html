@@ -1,1 +1,26 @@
+<section>
+  <fieldset>
+    <label for="">Rut alumno</label>
+    <input type="text" [value]="nuevoHistorialAlumno.rut" (input)="cambiarRut($event)">
+    <div [class.cafe]="nuevoHistorialAlumno.rut.length > 3">{{ nuevoHistorialAlumno.rut }}</div>
 
+    <label for="" [ngStyle]="{ 'font-size': '20px'}">Nombre Alumno</label>
+    <input type="text" [value]="nuevoHistorialAlumno.nombreAlumno" (input)="cambiarNombre($event)">
+    <div>{{ nuevoHistorialAlumno.nombreAlumno }}</div>
+
+    <label for="">Apellido Alumno</label>
+    <input type="text" [value]="nuevoHistorialAlumno.apellidoAlumno" (input)="cambiarApellido($event)">
+    <div>{{ nuevoHistorialAlumno.apellidoAlumno }}</div>
+
+    <label for="">Edad</label>
+    <input type="number" [value]="nuevoHistorialAlumno.edad" (input)="cambiarEdad($event)">
+    <div>{{ nuevoHistorialAlumno.edad }}</div>
+
+    <div></div>
+
+
+  </fieldset>
+  <fieldset>
+    <button type="button" role="button" (click)="guardarAlumno()">Registrar </button>
+  </fieldset>
+</section>
