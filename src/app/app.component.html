@@ -1,4 +1,19 @@
 <app-formulario-seccion (enviarSeccion)="agregarSeccion($event)"></app-formulario-seccion>
-<app-lista-alumnos ></app-lista-alumnos>
-<app-formulario-alumno ></app-formulario-alumno>
-<div *ngFor="let item in elementosGuardadosSeccion"></div>
+<app-formulario-alumno (enviarAlumno)="agregarAlumno($event)"></app-formulario-alumno>
+<app-lista-alumnos [alumnos]="elementosGuardadosAlumno"></app-lista-alumnos>
+
+
+<label for="">Escoga una seccion:</label>
+<div>{{ seccionSeleccionada.id }}{{ seccionSeleccionada.nombreSeccion }}</div>
+<select (change)="guardarSeccion()" [(ngModel)]="opcionSeleccionada">
+  <option value="0">Selecciona una opción</option>
+  <option *ngFor="let item of elementosGuardadosSeccion" [value]="item.id" >
+    {{ item.nombreSeccion }}
+  </option>
+</select>
+
+<div>{{ today | date: 'dd-MM-yyyy'}}</div>
+<div>{{ today | date: 'HH:mm:ss a zzzz'}}</div>
+
+
+<app-lista-historial [historiales]="elementosGuardadosHistorial"></app-lista-historial>

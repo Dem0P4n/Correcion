@@ -8,6 +8,8 @@ import { Alumno } from 'src/app/modelos/alumno';
 })
 export class FormularioAlumnoComponent {
 
+  @Output() public enviarAlumno = new EventEmitter<Alumno>();
+
   public nuevoHistorialAlumno: Alumno = {
     rut : '',
     nombreAlumno : '',
@@ -49,6 +51,7 @@ export class FormularioAlumnoComponent {
     const copia: Alumno = {
       ...this.nuevoHistorialAlumno
     }
+    this.enviarAlumno.emit(copia);
     this.nuevoHistorialAlumno.rut = '';
     this.nuevoHistorialAlumno.nombreAlumno = '';
     this.nuevoHistorialAlumno.apellidoAlumno = '';

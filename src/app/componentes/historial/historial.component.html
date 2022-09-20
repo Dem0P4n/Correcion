@@ -1,1 +1,10 @@
-<p>historial works!</p>
+<article>
+  <p>fecha: {{ historial.fecha | date: 'dd-MM-yyyy' }}</p>
+  <p>{{ historial.hora | date: 'HH:mm:ss'}}</p>
+  <p>{{ historial.alumno.rut }}</p>
+  <p>{{ historial.alumno.nombreAlumno }}</p>
+  <p>{{ historial.alumno.apellidoAlumno }}</p>
+  <p>{{ historial.alumno.edad }}</p>
+  <p>{{ historial.alumno.seccion.id }}</p>
+  <p>{{ historial.alumno.seccion.nombreSeccion }}</p>
+</article>

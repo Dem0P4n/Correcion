@@ -13,7 +13,7 @@
     <div>{{ nuevoHistorialAlumno.apellidoAlumno }}</div>
 
     <label for="">Edad</label>
-    <input type="number" [value]="nuevoHistorialAlumno.edad" (input)="cambiarEdad($event)">
+    <input type="number" min="0" [value]="nuevoHistorialAlumno.edad" (input)="cambiarEdad($event)">
     <div>{{ nuevoHistorialAlumno.edad }}</div>
 
     <div></div>
